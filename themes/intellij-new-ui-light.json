@@ -747,6 +747,14 @@
 			"foreground": "#9E880D",
 			"bold": true
 		},
+		"annotation.declaration": {
+			"foreground": "#9E880D",
+			"bold": true
+		},
+		"*.annotation": {
+			"foreground": "#9E880D",
+			"bold": true
+		},
 		"class": {
 			"bold": false
 		},

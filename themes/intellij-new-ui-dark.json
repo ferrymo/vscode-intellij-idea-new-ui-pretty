@@ -287,6 +287,12 @@
     "annotation": {
       "foreground": "#bbb529"
     },
+    "annotation.declaration": {
+      "foreground": "#bbb529"
+    },
+    "*.annotation": {
+      "foreground": "#bbb529"
+    },
     "namespace": {
       "foreground": "#c77dbb",
       "fontStyle": "italic"
