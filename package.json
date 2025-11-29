@@ -1,7 +1,7 @@
 {
-  "name": "intellij-idea-new-ui-pretty",
+  "name": "intellij-idea-new-ui-pretty-ferrymo",
   "publisher": "ferrymo",
-  "displayName": "IntelliJ IDEA New UI Pretty",
+  "displayName": "IntelliJ IDEA New UI Ferrymo",
   "description": "VSCode theme pack aims to replicate the aesthetic of IntelliJ IDEA's new user interface.（Specifically optimize Java）",
   "icon": "images/intellij-idea-256.png",
   "version": "1.5.1",
