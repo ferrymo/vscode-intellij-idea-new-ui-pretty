@@ -589,6 +589,21 @@
 			}
 		},
 
+		// java
+		{
+			"name": "Java Annotations",
+			"scope": [
+				"storage.type.annotation.java",
+				"punctuation.definition.annotation.java",
+				"variable.annotation.java",
+				"meta.declaration.annotation.java"
+			],
+			"settings": {
+				"foreground": "#9E880D",
+				"fontStyle": "bold"
+			}
+		},
+
 		
 		// javscript
 		{
@@ -726,6 +741,10 @@
 	],
 	"semanticHighlighting": true,
 	"semanticTokenColors": {
+		"annotation": {
+			"foreground": "#9E880D",
+			"bold": true
+		},
 		"class": {
 			"bold": false
 		},

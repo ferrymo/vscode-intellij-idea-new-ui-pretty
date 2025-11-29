@@ -1,10 +1,10 @@
 {
-  "name": "intellij-idea-new-ui",
-  "publisher": "compassak",
+  "name": "intellij-idea-new-ui-pretty",
+  "publisher": "ferrymo",
   "displayName": "IntelliJ IDEA New UI",
   "description": "VSCode theme pack aims to replicate the aesthetic of IntelliJ IDEA's new user interface.",
   "icon": "images/intellij-idea-256.png",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -34,10 +34,13 @@
       }
     ]
   },
+  "scripts": {
+    "build": "echo 'Building theme...'"
+  },
   "keywords": ["jetbrains","intellij","idea","light","dark","light-header","new","theme"],
-  "homepage": "https://github.com/compassak/vscode-intellij-idea-new-ui",
+  "homepage": "https://github.com/ferrymo/vscode-intellij-idea-new-ui-pretty",
   "repository": {
     "type": "github",
-    "url": "https://github.com/compassak/vscode-intellij-idea-new-ui.git"
+    "url": "https://github.com/ferrymo/vscode-intellij-idea-new-ui-pretty.git"
   }
 }

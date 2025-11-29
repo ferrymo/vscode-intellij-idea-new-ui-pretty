@@ -284,6 +284,9 @@
   },
   "semanticHighlighting": true,
   "semanticTokenColors": {
+    "annotation": {
+      "foreground": "#bbb529"
+    },
     "namespace": {
       "foreground": "#c77dbb",
       "fontStyle": "italic"
@@ -617,6 +620,18 @@
       ],
       "settings": {
         "foreground": "#d5b778"
+      }
+    },
+    {
+      "name": "Java Annotations",
+      "scope": [
+        "storage.type.annotation.java",
+        "punctuation.definition.annotation.java",
+        "variable.annotation.java",
+        "meta.declaration.annotation.java"
+      ],
+      "settings": {
+        "foreground": "#bbb529"
       }
     },
     {
