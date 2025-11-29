@@ -282,7 +282,7 @@
     "welcomePage.tileBackground": "#2b2d30",
     "welcomePage.tileHoverBackground": "#393b40"
   },
-  "semanticHighlighting": true,
+  "semanticHighlighting": false,
   "semanticTokenColors": {
     "annotation": {
       "foreground": "#bbb529"
@@ -292,6 +292,33 @@
     },
     "*.annotation": {
       "foreground": "#bbb529"
+    },
+    "annotationMember": {
+      "foreground": "#bcbec3"
+    },
+    "property.annotation": {
+      "foreground": "#bcbec3"
+    },
+    "method": {
+      "foreground": "#bcbec3"
+    },
+    "method.declaration": {
+      "foreground": "#bcbec3"
+    },
+    "method.static": {
+      "foreground": "#bcbec3"
+    },
+    "method.defaultLibrary": {
+      "foreground": "#bcbec3"
+    },
+    "function": {
+      "foreground": "#bcbec3"
+    },
+    "function.defaultLibrary": {
+      "foreground": "#bcbec3"
+    },
+    "*.declaration": {
+      "foreground": "#bcbec3"
     },
     "namespace": {
       "foreground": "#c77dbb",
@@ -574,7 +601,7 @@
         "string.other.link.description.title.markdown"
       ],
       "settings": {
-        "foreground": "#57a8f5",
+        "foreground": "#bcbec3",
         "fontStyle": ""
       }
     },

@@ -739,7 +739,7 @@
 			}
 		},
 	],
-	"semanticHighlighting": true,
+	"semanticHighlighting": false,
 	"semanticTokenColors": {
 		"annotation": {
 			"foreground": "#9E880D",
@@ -752,6 +752,21 @@
 		"*.annotation": {
 			"foreground": "#9E880D",
 			"bold": true
+		},
+		"annotationMember": {
+			"foreground": "#000000"
+		},
+		"property.annotation": {
+			"foreground": "#000000"
+		},
+		"method": {
+			"foreground": "#000000"
+		},
+		"method.static": {
+			"foreground": "#000000"
+		},
+		"function": {
+			"foreground": "#000000"
 		},
 		"class": {
 			"bold": false
