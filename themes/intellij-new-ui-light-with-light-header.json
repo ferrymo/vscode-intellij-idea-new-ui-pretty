@@ -599,8 +599,7 @@
 				"meta.declaration.annotation.java"
 			],
 			"settings": {
-				"foreground": "#9E880D",
-				"fontStyle": "bold"
+				"foreground": "#7D7840"
 			}
 		},
 

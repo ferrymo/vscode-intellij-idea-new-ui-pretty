@@ -282,100 +282,119 @@
     "welcomePage.tileBackground": "#2b2d30",
     "welcomePage.tileHoverBackground": "#393b40"
   },
-  "semanticHighlighting": false,
+  "semanticHighlighting": true,
   "semanticTokenColors": {
     "annotation": {
-      "foreground": "#bbb529"
+      "foreground": "#b3ae60"
     },
     "annotation.declaration": {
-      "foreground": "#bbb529"
+      "foreground": "#b3ae60"
     },
     "*.annotation": {
-      "foreground": "#bbb529"
+      "foreground": "#b3ae60"
     },
     "annotationMember": {
-      "foreground": "#bcbec3"
+      "foreground": "#bcbec4"
     },
     "property.annotation": {
-      "foreground": "#bcbec3"
-    },
-    "method": {
-      "foreground": "#bcbec3"
-    },
-    "method.declaration": {
-      "foreground": "#bcbec3"
-    },
-    "method.static": {
-      "foreground": "#bcbec3"
-    },
-    "method.defaultLibrary": {
-      "foreground": "#bcbec3"
-    },
-    "function": {
-      "foreground": "#bcbec3"
-    },
-    "function.defaultLibrary": {
-      "foreground": "#bcbec3"
-    },
-    "*.declaration": {
-      "foreground": "#bcbec3"
-    },
-    "namespace": {
-      "foreground": "#c77dbb",
-      "fontStyle": "italic"
-    },
-    "variable": {
-      "foreground": "#a9b7c5"
-    },
-    "variable.defaultLibrary": {
-      "foreground": "#c77dbb",
-      "fontStyle": "italic"
+      "foreground": "#bcbec4"
     },
     "parameter": {
-      "foreground": "#bcbec3"
+      "foreground": "#bcbec4"
     },
-    "typeParameter": {
-      "foreground": "#507874"
+    "parameter.declaration": {
+      "foreground": "#bcbec4"
     },
-    "type": {
-      "foreground": "#bcbec3"
+    "variable": {
+      "foreground": "#bcbec4"
     },
-    "type.defaultLibrary": {
-      "fontStyle": "italic"
+    "variable.readonly": {
+      "foreground": "#c77dbb"
     },
-    "interface": {
-      "foreground": "#bcbec3"
-    },
-    "interface.defaultLibrary": {
-      "fontStyle": "italic"
-    },
-    "class": {
-      "foreground": "#bcbec3"
-    },
-    "class.defaultLibrary": {
+    "variable.defaultLibrary": {
       "foreground": "#c77dbb",
       "fontStyle": "italic"
     },
     "property": {
       "foreground": "#c77dbb"
     },
+    "property.readonly": {
+      "foreground": "#c77dbb"
+    },
     "property.defaultLibrary": {
       "foreground": "#14c4b6"
+    },
+    "method": {
+      "foreground": "#bcbec4"
+    },
+    "method.declaration": {
+      "foreground": "#56a8f5"
+    },
+    "method.static": {
+      "foreground": "#bcbec4"
+    },
+    "method.static.declaration": {
+      "foreground": "#56a8f5",
+      "fontStyle": "italic"
+    },
+    "function": {
+      "foreground": "#bcbec4"
+    },
+    "function.declaration": {
+      "foreground": "#56a8f5"
+    },
+    "typeParameter": {
+      "foreground": "#16baac"
+    },
+    "type": {
+      "foreground": "#bcbec4"
+    },
+    "interface": {
+      "foreground": "#bcbec4"
+    },
+    "class": {
+      "foreground": "#bcbec4"
+    },
+    "enum": {
+      "foreground": "#bcbec4"
+    },
+    "enumMember": {
+      "foreground": "#c77dbb",
+      "fontStyle": "italic"
+    },
+    "namespace": {
+      "foreground": "#c77dbb",
+      "fontStyle": "italic"
     }
   },
   "tokenColors": [
     {
+      "name": "Punctuation (commas, semicolons, etc)",
+      "scope": [
+        "punctuation.separator.comma",
+        "punctuation.separator.delimiter",
+        "punctuation.terminator.statement",
+        "meta.brace.round",
+        "meta.brace.square",
+        "punctuation.definition.parameters",
+        "punctuation.separator.parameter"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
+      }
+    },
+    {
       "name": "Comment",
       "scope": ["comment"],
       "settings": {
-        "foreground": "#7A7E85"
+        "foreground": "#7a7e85"
       }
     },
     {
       "name": "Block Comments",
       "scope": ["comment.block.documentation"],
       "settings": {
-        "foreground": "#5F826B",
+        "foreground": "#5f826b",
         "fontStyle": "italic"
       }
     },
@@ -383,7 +402,7 @@
       "name": "Block Comments - type",
       "scope": ["comment.block.documentation storage.type"],
       "settings": {
-        "foreground": "#68A67E",
+        "foreground": "#67a37c",
         "fontStyle": "italic"
       }
     },
@@ -395,13 +414,12 @@
       }
     },
     {
+      "name": "Keywords",
       "scope": [
         "keyword",
         "keyword.operator.new",
         "keyword.operator.expression",
-        "storage",
-        "storage.type",
-        "support.type",
+        "storage.modifier",
         "constant.language",
         "variable.language.this",
         "variable.key.dotenv",
@@ -416,8 +434,68 @@
         "punctuation.definition.quote.begin.markdown"
       ],
       "settings": {
-        "foreground": "#ce8e6d",
+        "foreground": "#cf8e6d",
         "fontStyle": ""
+      }
+    },
+    {
+      "name": "Storage Type (should be white for variable declarations)",
+      "scope": [
+        "storage.type.java",
+        "storage.type.primitive.java",
+        "storage.type.object.array.java",
+        "storage.type.generic.java"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
+      }
+    },
+    {
+      "name": "Class and Type References",
+      "scope": [
+        "support.type",
+        "support.class",
+        "variable.other.class",
+        "entity.other.inherited-class",
+        "meta.import.java",
+        "entity.name.type.class.java",
+        "entity.name.type.interface.java",
+        "meta.class.identifier.java entity.name.type"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
+      }
+    },
+    {
+      "name": "Method and Function Calls (should be white)",
+      "scope": [
+        "entity.name.function",
+        "meta.function-call",
+        "meta.method-call",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
+      }
+    },
+    {
+      "name": "Method Declaration (should be blue, more specific)",
+      "scope": [
+        "meta.method.identifier.java",
+        "meta.method.java entity.name.function",
+        "meta.method.declaration.java entity.name.function"
+      ],
+      "settings": {
+        "foreground": "#56a8f5"
+      }
+    },
+    {
+      "name": "Storage (class, function, etc keywords)",
+      "scope": [
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#cf8e6d"
       }
     },
     {
@@ -491,7 +569,7 @@
         "string.regexp keyword.other"
       ],
       "settings": {
-        "foreground": "#2cabb8"
+        "foreground": "#2aacb8"
       }
     },
     {
@@ -515,7 +593,7 @@
         "meta.type.infer entity.name.type"
       ],
       "settings": {
-        "foreground": "#507874"
+        "foreground": "#16baac"
       }
     },
     {
@@ -546,7 +624,7 @@
         "storage.type.function.arrow"
       ],
       "settings": {
-        "foreground": "#bcbec3"
+        "foreground": "#bcbec4"
       }
     },
     {
@@ -597,11 +675,10 @@
     {
       "scope": [
         "constant.other.color.rgb-value",
-        "entity.name.function",
         "string.other.link.description.title.markdown"
       ],
       "settings": {
-        "foreground": "#bcbec3",
+        "foreground": "#56a8f5",
         "fontStyle": ""
       }
     },
@@ -664,7 +741,33 @@
         "meta.declaration.annotation.java"
       ],
       "settings": {
-        "foreground": "#bbb529"
+        "foreground": "#b3ae60"
+      }
+    },
+    {
+      "name": "Java Import Statements",
+      "scope": [
+        "keyword.control.import.java",
+        "keyword.control.package.java",
+        "keyword.other.import.java",
+        "keyword.other.package.java"
+      ],
+      "settings": {
+        "foreground": "#cf8e6d"
+      }
+    },
+    {
+      "name": "Java Import and Package Paths (should be white)",
+      "scope": [
+        "meta.import.java storage.modifier.import",
+        "meta.import.java entity.name.type",
+        "meta.package.java entity.name.type",
+        "meta.import.java",
+        "entity.name.import.java",
+        "variable.language.wildcard.java"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
       }
     },
     {
