@@ -293,6 +293,12 @@
     "*.annotation": {
       "foreground": "#b3ae60"
     },
+    "modifier.annotation": {
+      "foreground": "#b3ae60"
+    },
+    "type.annotation": {
+      "foreground": "#b3ae60"
+    },
     "annotationMember": {
       "foreground": "#bcbec4"
     },
@@ -738,7 +744,9 @@
         "storage.type.annotation.java",
         "punctuation.definition.annotation.java",
         "variable.annotation.java",
-        "meta.declaration.annotation.java"
+        "meta.declaration.annotation.java",
+        "meta.annotation.java",
+        "storage.modifier.annotation.java"
       ],
       "settings": {
         "foreground": "#b3ae60"
