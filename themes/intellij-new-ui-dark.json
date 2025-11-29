@@ -74,7 +74,7 @@
     "gitDecoration.stageModifiedResourceForeground": "#6897bb",
     "gitDecoration.stageDeletedResourceForeground": "#6c6c6c",
     "gitDecoration.untrackedResourceForeground": "#d1675a",
-    "gitDecoration.ignoredResourceForeground": "#848504",
+    "gitDecoration.ignoredResourceForeground": "#6f737a",
     "gitDecoration.conflictingResourceForeground": "#d5756c",
 
     "panel.background": "#2b2d30",
