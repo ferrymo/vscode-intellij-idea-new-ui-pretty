@@ -1,6 +1,34 @@
 {
   "$schema": "vscode://schemas/color-theme",
   "type": "dark",
+  "name": "IntelliJ IDEA New UI Dark",
+  
+  // ========================================
+  // IntelliJ IDEA New UI Dark Theme
+  // ========================================
+  // Based on IntelliJ IDEA 2025.1.2 Dark Theme (Dark.icls)
+  //
+  // Main Color Palette:
+  // - Background: #1e1f22 (editor), #2b2d30 (sidebar/panels)
+  // - Foreground: #bcbec4 (default text)
+  // - Keywords: #cf8e6d (orange-brown)
+  // - Strings: #6aab73 (green)
+  // - Numbers: #2aacb8 (cyan)
+  // - Comments: #7a7e85 (gray)
+  // - Doc Comments: #5f826b (green-gray)
+  // - Annotations: #b3ae60 (muted yellow)
+  // - Methods (declaration): #56a8f5 (blue)
+  // - Methods (call): #bcbec4 (white)
+  // - Properties/Fields: #c77dbb (purple)
+  // - Type Parameters: #16baac (cyan)
+  //
+  // Design Principles:
+  // - Semantic highlighting enabled for accurate token classification
+  // - Method calls are white; only declarations are blue
+  // - Classes and interfaces are white (not blue)
+  // - Annotations are muted yellow (#b3ae60)
+  // ========================================
+  
   "colors": {
     "titleBar.activeBackground": "#2b2d30",
     "titleBar.inactiveBackground": "#2b2d30",
@@ -284,6 +312,10 @@
   },
   "semanticHighlighting": true,
   "semanticTokenColors": {
+    // ========================================
+    // Annotations (Java @Override, @Component, etc.)
+    // Color: #b3ae60 (muted yellow)
+    // ========================================
     "annotation": {
       "foreground": "#b3ae60"
     },
@@ -305,6 +337,11 @@
     "property.annotation": {
       "foreground": "#bcbec4"
     },
+
+    // ========================================
+    // Parameters and Variables
+    // Color: #bcbec4 (white/light gray)
+    // ========================================
     "parameter": {
       "foreground": "#bcbec4"
     },
@@ -321,6 +358,11 @@
       "foreground": "#c77dbb",
       "fontStyle": "italic"
     },
+
+    // ========================================
+    // Properties and Fields
+    // Color: #c77dbb (purple/magenta)
+    // ========================================
     "property": {
       "foreground": "#c77dbb"
     },
@@ -330,6 +372,11 @@
     "property.defaultLibrary": {
       "foreground": "#14c4b6"
     },
+
+    // ========================================
+    // Methods and Functions
+    // Calls: #bcbec4 (white), Declarations: #56a8f5 (blue)
+    // ========================================
     "method": {
       "foreground": "#bcbec4"
     },
@@ -349,6 +396,12 @@
     "function.declaration": {
       "foreground": "#56a8f5"
     },
+
+    // ========================================
+    // Types (Class, Interface, Enum, Type Parameters)
+    // Color: #bcbec4 (white/light gray)
+    // Type parameters: #16baac (cyan)
+    // ========================================
     "typeParameter": {
       "foreground": "#16baac"
     },
@@ -368,12 +421,25 @@
       "foreground": "#c77dbb",
       "fontStyle": "italic"
     },
+
+    // ========================================
+    // Namespace
+    // Color: #c77dbb (purple/magenta)
+    // ========================================
     "namespace": {
       "foreground": "#c77dbb",
       "fontStyle": "italic"
     }
   },
   "tokenColors": [
+    // ========================================
+    // TOKEN COLORS - TextMate Grammar Rules
+    // These rules apply before semantic highlighting
+    // Order matters: more specific rules should come after general ones
+    // Based on IntelliJ IDEA Dark Theme (Dark.icls)
+    // ========================================
+
+    // Punctuation: commas, semicolons, parentheses
     {
       "name": "Punctuation (commas, semicolons, etc)",
       "scope": [
@@ -383,12 +449,15 @@
         "meta.brace.round",
         "meta.brace.square",
         "punctuation.definition.parameters",
-        "punctuation.separator.parameter"
+        "punctuation.separator.parameter",
+        "punctuation.separator"
       ],
       "settings": {
         "foreground": "#bcbec4"
       }
     },
+    
+    // Comments
     {
       "name": "Comment",
       "scope": ["comment"],
@@ -417,6 +486,19 @@
       "settings": {
         "foreground": "#b9954e",
         "fontStyle": "italic"
+      }
+    },
+    
+    // Variables and Parameters (base rule for all languages)
+    {
+      "name": "Variables and Parameters",
+      "scope": [
+        "variable.parameter",
+        "variable.other.readwrite",
+        "meta.definition.variable"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
       }
     },
     {
@@ -472,27 +554,29 @@
         "foreground": "#bcbec4"
       }
     },
+    // Java-specific: Method calls and parameters (before semantic highlighting)
     {
-      "name": "Method and Function Calls (should be white)",
+      "name": "Java Parameters and Variables (Interface and Class)",
       "scope": [
-        "entity.name.function",
-        "meta.function-call",
-        "meta.method-call",
-        "support.function"
+        "variable.parameter.java",
+        "meta.method.parameters.java variable",
+        "meta.method.identifier.java variable",
+        "meta.method.body.java variable.other.object",
+        "meta.method.java variable.other.object.java"
       ],
       "settings": {
         "foreground": "#bcbec4"
       }
     },
     {
-      "name": "Method Declaration (should be blue, more specific)",
+      "name": "General Method and Function Calls (for non-Java languages)",
       "scope": [
-        "meta.method.identifier.java",
-        "meta.method.java entity.name.function",
-        "meta.method.declaration.java entity.name.function"
+        "entity.name.function",
+        "meta.function-call.generic",
+        "support.function"
       ],
       "settings": {
-        "foreground": "#56a8f5"
+        "foreground": "#bcbec4"
       }
     },
     {
@@ -523,7 +607,6 @@
         "variable.language",
         "meta.object-literal.key",
         "meta.definition.property",
-        "meta.definition.property entity.name.function",
         "support.type.property-name.json",
         "support.variable.property",
         "support.type.object.module",
@@ -646,12 +729,6 @@
       }
     },
     {
-      "scope": ["variable.other.readwrite", "variable.other.constant"],
-      "settings": {
-        "foreground": "#a9b7c5"
-      }
-    },
-    {
       "scope": ["variable.other.jsdoc", "entity.name.type.instance.jsdoc"],
       "settings": {
         "foreground": "#abadb3"
@@ -750,6 +827,29 @@
       ],
       "settings": {
         "foreground": "#b3ae60"
+      }
+    },
+    {
+      "name": "Java Method Invocation (MUST be white, not blue)",
+      "scope": [
+        "meta.method.body.java meta.method-call.java entity.name.function.java",
+        "meta.method.body.java entity.name.function.java",
+        "meta.method-call.java entity.name.function",
+        "source.java meta.method-call entity.name.function"
+      ],
+      "settings": {
+        "foreground": "#bcbec4"
+      }
+    },
+    {
+      "name": "Java Method Declaration (MUST be blue)",
+      "scope": [
+        "meta.method.identifier.java entity.name.function.java",
+        "meta.method.declaration.java entity.name.function.java",
+        "source.java meta.method.identifier entity.name.function"
+      ],
+      "settings": {
+        "foreground": "#56a8f5"
       }
     },
     {
